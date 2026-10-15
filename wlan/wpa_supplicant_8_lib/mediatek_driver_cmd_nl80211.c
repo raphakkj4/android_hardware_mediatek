@@ -336,7 +336,7 @@ static int wpa_driver_nl80211_testmode(void* priv, const u8* data, size_t data_l
     params = (struct wpa_driver_testmode_params*)data;
 
     /* Mask version field */
-    index = params->hdr.index & BITS(0, 23);
+    index = params->hdr.index & MTK_BITS(0, 23);
 
     switch (index) {
         case NL80211_TESTMODE_STATISTICS: {

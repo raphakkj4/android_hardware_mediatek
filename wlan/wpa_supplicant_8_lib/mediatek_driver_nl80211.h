@@ -8,13 +8,13 @@
 
 #include <linux/wireless.h>
 
-#ifndef BITS
-/* bits range: for example BITS(16,23) = 0xFF0000
+#ifndef MTK_BITS
+/* bits range: for example MTK_BITS(16,23) = 0xFF0000
  *   ==>  (BIT(m)-1)   = 0x0000FFFF     ~(BIT(m)-1)   => 0xFFFF0000
  *   ==>  (BIT(n+1)-1) = 0x00FFFFFF
  */
-#define BITS(m, n) (~(BIT(m) - 1) & ((BIT(n) - 1) | BIT(n)))
-#endif /* BIT */
+#define MTK_BITS(m, n) (~(BIT(m) - 1) & ((BIT(n) - 1) | BIT(n)))
+#endif /* MTK_BITS */
 
 #define OUI_MTK 0x000CE7
 
